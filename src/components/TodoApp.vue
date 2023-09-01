@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="max-width: 600px">
+  <div class="container" style="max-width: 650px">
     <h2 class="text-center mt-5 text1">My Todo App</h2>
 
     <div class="d-flex mt-5">
