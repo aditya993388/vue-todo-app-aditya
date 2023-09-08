@@ -1,25 +1,24 @@
 <template>
-  <div class="container" style="max-width: 650px">
-    <h2 class="text-center mt-5 text1">My Todo App</h2>
+  <div class="container" id="my-todo-app">
+    <h2 class="text-center mt-5 custom-text">My Todo App</h2>
 
     <div class="d-flex mt-5">
       <input
         type="text"
         v-model="task"
         placeholder="Enter task"
-        class="w-100 form-control"
+        class="w-100 custom-input"
       />
-      <button class="btn btn-warning rounded-0 bga" @click="submitTask">
+      <button class="custom-button" @click="submitTask">
         SUBMIT
       </button>
     </div>
 
-    <table class="table table-bordered mt-5">
+    <table class="custom-table mt-5">
       <thead>
         <tr>
-          <th scope="col" class="text1">Task</th>
-          <th scope="col" class="text-center text1">Delete</th>
-         
+          <th scope="col" class="custom-text">Task</th>
+          <th scope="col" class="text-center custom-text">Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -31,7 +30,7 @@
           </td>
           <td class="text-center">
             <div @click="deleteTask(index)">
-              <span class="fa fa-trash"></span>
+              <span class="custom-icon">&#x1F5D1;</span>
             </div>
           </td>
         </tr>
@@ -56,7 +55,7 @@ export default {
           name: "Buy apples from the supermarket." 
         },
         {
-          name: "Excercise for 1 hr"
+          name: "Exercise for 1 hr"
         },
         {
           name: "Complete homework."
@@ -82,11 +81,35 @@ export default {
   },
 };
 </script>
+
 <style scoped>
-.bga {
-  background-color: indianred;
+#my-todo-app {
+  max-width: 650px;
 }
-.text1 {
+
+.custom-text {
   color: brown;
+}
+
+.custom-input {
+  width: 100%;
+}
+
+.custom-button {
+  background-color: indianred;
+  border: none;
+  border-radius: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.custom-table {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.custom-icon {
+  font-size: 24px;
+  cursor: pointer;
 }
 </style>
